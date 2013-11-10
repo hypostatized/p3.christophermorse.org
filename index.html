@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="paper"></div>
+    <script>
+
+var height = $(document).height();
+var width = $(document).width();
+
+
+function piano() {
+var paper = Raphael(0, 0, width, height);
+
+  function arc(center, radius, startAngle, endAngle) {
+      angle = startAngle;
+      coords = toCoords(center, radius, angle);
+      path = "M " + coords[0] + " " + coords[1];
+      while(angle<=endAngle) {
+          coords = toCoords(center, radius, angle);
+          path += " L " + coords[0] + " " + coords[1];
+          angle += 1;
+      }
+      return path;
+  }
+
+  function toCoords(center, radius, angle) {
+      var radians = (angle/180) * Math.PI;
+      var x = center[0] + Math.cos(radians) * radius;
+      var y = center[1] + Math.sin(radians) * radius;
+      return [x, y];
+  }
+
+// draw an arc, centered at (100,100), radius 80,
+// start at degree 0, beginning at coord (x, y),
+// relative to the center of circle
+
+var note = paper.path(arc([width/2, height/2], 100, 0, 30));
+note.attr("stroke-width", "75");
+note.attr("stroke", "#FFFF00");
+var note2 = paper.path(arc([width/2, height/2], 100, 30, 60));
+note2.attr("stroke-width", "75");
+note2.attr("stroke", "#7FFF00");
+var note3 = paper.path(arc([width/2, height/2], 100, 60, 90));
+note3.attr("stroke-width", "75");
+note3.attr("stroke", "#00FF00");
+var note4 = paper.path(arc([width/2, height/2], 100, 90, 120));
+note4.attr("stroke-width", "75");
+note4.attr("stroke", "#00FF7F");
+var note5 = paper.path(arc([width/2, height/2], 100, 120, 150));
+note5.attr("stroke-width", "75");
+note5.attr("stroke", "#00FFFF");
+var note6 = paper.path(arc([width/2, height/2], 100, 150, 180));
+note6.attr("stroke-width", "75");
+note6.attr("stroke", "#007FFF");
+var note7 = paper.path(arc([width/2, height/2], 100, 180, 210));
+note7.attr("stroke-width", "75");
+note7.attr("stroke", "#0000FF");
+var note8 = paper.path(arc([width/2, height/2], 100, 210, 240));
+note8.attr("stroke-width", "75");
+note8.attr("stroke", "#7F00FF");
+var note9 = paper.path(arc([width/2, height/2], 100, 240, 270));
+note9.attr("stroke-width", "75");
+note9.attr("stroke", "#FF00FF");
+var note10 = paper.path(arc([width/2, height/2], 100, 270, 300));
+note10.attr("stroke-width", "75");
+note10.attr("stroke", "#FF007F");
+var note11 = paper.path(arc([width/2, height/2], 100, 300, 330));
+note11.attr("stroke-width", "75");
+note11.attr("stroke", "#FF0000");
+var note12 = paper.path(arc([width/2, height/2], 100, 330, 360));
+note12.attr("stroke-width", "75");
+note12.attr("stroke", "#FF7F00");
+
+var anote = paper.path(arc([width/2, height/2], 200, 0, 30));
+anote.attr("stroke-width", "75");
+anote.attr("stroke", "#FFFF00");
+anote.attr("opacity", .6);
+var anote2 = paper.path(arc([width/2, height/2], 200, 30, 60));
+anote2.attr("stroke-width", "75");
+anote2.attr("stroke", "#7FFF00");
+anote2.attr("opacity", .6);
+var anote3 = paper.path(arc([width/2, height/2], 200, 60, 90));
+anote3.attr("stroke-width", "75");
+anote3.attr("stroke", "#00FF00");
+anote3.attr("opacity", .6);
+var anote4 = paper.path(arc([width/2, height/2], 200, 90, 120));
+anote4.attr("stroke-width", "75");
+anote4.attr("stroke", "#00FF7F");
+anote4.attr("opacity", .6);
+var anote5 = paper.path(arc([width/2, height/2], 200, 120, 150));
+anote5.attr("stroke-width", "75");
+anote5.attr("stroke", "#00FFFF");
+anote5.attr("opacity", .6);
+var anote6 = paper.path(arc([width/2, height/2], 200, 150, 180));
+anote6.attr("stroke-width", "75");
+anote6.attr("stroke", "#007FFF");
+anote6.attr("opacity", .6);
+var anote7 = paper.path(arc([width/2, height/2], 200, 180, 210));
+anote7.attr("stroke-width", "75");
+anote7.attr("stroke", "#0000FF");
+anote7.attr("opacity", .6);
+var anote8 = paper.path(arc([width/2, height/2], 200, 210, 240));
+anote8.attr("stroke-width", "75");
+anote8.attr("stroke", "#7F00FF");
+anote8.attr("opacity", .6);
+var anote9 = paper.path(arc([width/2, height/2], 200, 240, 270));
+anote9.attr("stroke-width", "75");
+anote9.attr("stroke", "#FF00FF");
+anote9.attr("opacity", .6);
+var anote10 = paper.path(arc([width/2, height/2], 200, 270, 300));
+anote10.attr("stroke-width", "75");
+anote10.attr("stroke", "#FF007F");
+anote10.attr("opacity", .6);
+var anote11 = paper.path(arc([width/2, height/2], 200, 300, 330));
+anote11.attr("stroke-width", "75");
+anote11.attr("stroke", "#FF0000");
+anote11.attr("opacity", .6);
+var anote12 = paper.path(arc([width/2, height/2], 200, 330, 360));
+anote12.attr("stroke-width", "75");
+anote12.attr("stroke", "#FF7F00");
+anote12.attr("opacity", .6);
+
+var bnote = paper.path(arc([width/2, height/2], 300, 0, 30));
+bnote.attr("stroke-width", "75");
+bnote.attr("stroke", "#FFFF00");
+bnote.attr("opacity", .3);
+var bnote2 = paper.path(arc([width/2, height/2], 300, 30, 60));
+bnote2.attr("stroke-width", "75");
+bnote2.attr("stroke", "#7FFF00");
+bnote2.attr("opacity", .3);
+var bnote3 = paper.path(arc([width/2, height/2], 300, 60, 90));
+bnote3.attr("stroke-width", "75");
+bnote3.attr("stroke", "#00FF00");
+bnote3.attr("opacity", .3);
+var bnote4 = paper.path(arc([width/2, height/2], 300, 90, 120));
+bnote4.attr("stroke-width", "75");
+bnote4.attr("stroke", "#00FF7F");
+bnote4.attr("opacity", .3);
+var bnote5 = paper.path(arc([width/2, height/2], 300, 120, 150));
+bnote5.attr("stroke-width", "75");
+bnote5.attr("stroke", "#00FFFF");
+bnote5.attr("opacity", .3);
+var bnote6 = paper.path(arc([width/2, height/2], 300, 150, 180));
+bnote6.attr("stroke-width", "75");
+bnote6.attr("stroke", "#007FFF");
+bnote6.attr("opacity", .3);
+var bnote7 = paper.path(arc([width/2, height/2], 300, 180, 210));
+bnote7.attr("stroke-width", "75");
+bnote7.attr("stroke", "#0000FF");
+bnote7.attr("opacity", .3);
+var bnote8 = paper.path(arc([width/2, height/2], 300, 210, 240));
+bnote8.attr("stroke-width", "75");
+bnote8.attr("stroke", "#7F00FF");
+bnote8.attr("opacity", .3);
+var bnote9 = paper.path(arc([width/2, height/2], 300, 240, 270));
+bnote9.attr("stroke-width", "75");
+bnote9.attr("stroke", "#FF00FF");
+bnote9.attr("opacity", .3);
+var bnote10 = paper.path(arc([width/2, height/2], 300, 270, 300));
+bnote10.attr("stroke-width", "75");
+bnote10.attr("stroke", "#FF007F");
+bnote10.attr("opacity", .3);
+var bnote11 = paper.path(arc([width/2, height/2], 300, 300, 330));
+bnote11.attr("stroke-width", "75");
+bnote11.attr("stroke", "#FF0000");
+bnote11.attr("opacity", .3);
+var bnote12 = paper.path(arc([width/2, height/2], 300, 330, 360));
+bnote12.attr("stroke-width", "75");
+bnote12.attr("stroke", "#FF7F00");
+bnote12.attr("opacity", .3);
+
+$( document ).keydown(function() {
+  
+console.log( "Handler for .keypress() called." );
+note.attr("stroke", "#333333");
+
+
+});
+
+$( document ).keyup(function() {
+  
+console.log( "Handler for .keypress() called." );
+note.attr("stroke", "#FFFF00");
+
+
+});
+
+
+};
+
+var piano = piano();
+
+
+   
+   </script>
+</body>
+</html>
