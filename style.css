@@ -1,0 +1,14 @@
+body {
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+#nav {
+	float: top;
+	height: 20px;
+	width: 100%;
+}
+
+ul, li {
+	display: inline;
+	padding: 15px;
+}
