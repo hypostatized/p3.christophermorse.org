@@ -23,13 +23,13 @@ function piano() {
     var paper = Raphael(0, 0, width, height);
 
     // draw title text
-    paper.text(100, 50, "COLOR\tPIANO\t\nby\tChristopher\tMorse").attr({
+    paper.text(150, 50, "CYCLOCHROMATOPHONE\t\nby\tChristopher\tMorse").attr({
         "font-family": "Candara, Calibri, Segoe, Optima, Arial, sans-serif",
         "font-size": "18"
     });
 
     // draw about link
-    paper.text(100, 100, "About").attr({
+    paper.text(150, 100, "About").attr({
         "font-family": "Candara, Calibri, Segoe, Optima, Arial, sans-serif",
         "font-size": "16",
         "fill": "red",
@@ -37,7 +37,7 @@ function piano() {
     });
 
     // draw directions link
-    paper.text(100, 125, "Directions").attr({
+    paper.text(150, 125, "Directions").attr({
         "font-family": "Candara, Calibri, Segoe, Optima, Arial, sans-serif",
         "font-size": "16",
         "fill": "red",
