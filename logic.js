@@ -9,6 +9,22 @@
             // create paper canvas for Raphael library
             var paper = Raphael(0, 0, width, height);
 
+            paper.text(100, 50, "COLOR\tPIANO\t\nby\tChristopher\tMorse").attr(
+                {"font-family":"Candara, Calibri, Segoe, Optima, Arial, sans-serif",
+                "font-size":"18"});
+
+            paper.text(100, 100, "About").attr(
+                {"font-family":"Candara, Calibri, Segoe, Optima, Arial, sans-serif",
+                "font-size":"16",
+                "fill":"red",
+                "href":"http://www.google.com"});   
+            
+            paper.text(100, 125, "Directions").attr(
+                {"font-family":"Candara, Calibri, Segoe, Optima, Arial, sans-serif",
+                "font-size":"16",
+                "fill":"red",
+                "href":"http://www.google.com"});   
+
             // get coordinates for each arc
             function getCoords(center, radius, angle) {
                 var radians = (angle / 180) * Math.PI;
