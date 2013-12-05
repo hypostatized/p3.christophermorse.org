@@ -17,13 +17,13 @@
                 {"font-family":"Candara, Calibri, Segoe, Optima, Arial, sans-serif",
                 "font-size":"16",
                 "fill":"red",
-                "href":"http://www.google.com"});   
+                "href":"/about.html"});   
             
             paper.text(100, 125, "Directions").attr(
                 {"font-family":"Candara, Calibri, Segoe, Optima, Arial, sans-serif",
                 "font-size":"16",
                 "fill":"red",
-                "href":"http://www.google.com"});   
+                "href":"/directions.html"});   
 
             // get coordinates for each arc
             function getCoords(center, radius, angle) {
