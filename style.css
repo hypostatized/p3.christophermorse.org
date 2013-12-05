@@ -1,5 +1,45 @@
+a:link {
+	color:red;
+	text-decoration: none;
+}
+a:visited {
+	color:red;
+	text-decoration: none;
+}
+a:hover {
+	color:red;
+	text-decoration: none;
+}
+a:active {
+	color:red;
+	text-decoration: none;
+}
+
 body {
 	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+#about {
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 75px;
+	text-align: justify;
+}
+
+.emphasize {
+	font-style: italic;
+}
+
+.example {
+	text-align: center;
+}
+
+.fancy {
+	color: red;
+}
+
+h3 {
+	text-align: center;
 }
 
 #nav {
