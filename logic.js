@@ -490,6 +490,7 @@ function piano() {
                 });
                 // play audio
                 var clickSound = new Audio('piano/' + notes[i].note + musicfile);
+                clickSound.preload = "auto";
                 clickSound.play();
             }
         }
@@ -497,8 +498,6 @@ function piano() {
 
     // delete lines connecting pitch to
     // center of instrument
-
-
     function removeMusic(keys) {
         musicLine[keys].remove();
     }

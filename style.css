@@ -1,38 +1,45 @@
 body {
-font-family:Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 #about {
-margin-left:300px;
-margin-right:300px;
-margin-top:75px;
-text-align:justify;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 75px;
+	text-align: justify;
+}
+
+#directions {
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 75px;
+	text-align: center;
 }
 
 .emphasize {
-font-style:italic;
+	font-style: italic;
 }
 
 .fancy {
-color:red;
+	color: red;
 }
 
 #nav {
-float:top;
-height:20px;
-width:100%;
+	float: top;
+	height: 20px;
+	width: 100%;
 }
 
 ul,li {
-display:inline;
-padding:15px;
+	display: inline;
+	padding: 15px;
 }
 
 a:link,a:visited,a:hover,a:active {
-color:red;
-text-decoration:none;
+	color: red;
+	text-decoration: none;
 }
 
 .example,h3 {
-text-align:center;
+	text-align: center;
 }
